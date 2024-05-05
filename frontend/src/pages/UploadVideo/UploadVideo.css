@@ -1,0 +1,34 @@
+.video-upload-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 40vh;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: 100ms background-color linear;
+
+    &:hover {
+      background-color: gray;
+    }
+  }
+}
+
+.go-back-arr {
+  text-align: left;
+  width: 100%;
+  padding: 1rem 0 0 2rem;
+  cursor: pointer;
+  transition: 100ms color linear;
+
+  &:hover {
+    color: blue;
+  }
+}

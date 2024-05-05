@@ -1,0 +1,18 @@
+.video-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .go-back-arr {
+    text-align: left;
+    width: 100%;
+    padding: 1rem 0 0 2rem ;
+    cursor: pointer;
+    transition: 100ms color linear;
+
+    &:hover {
+      color: blue;
+    }
+  }
+}
