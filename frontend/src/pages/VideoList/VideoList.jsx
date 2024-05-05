@@ -25,7 +25,7 @@ const VideoList = () => {
       </button>
       <h1>Videos</h1>
       <div className="thumbnail-container">
-        {folders.length > 0 &&
+        {folders.length > 0 ? (
           folders.map((folder) => (
             <div key={folder} onClick={() => loadVideo(folder)}>
               <img
@@ -33,7 +33,10 @@ const VideoList = () => {
               />
               <p>{folder}</p>
             </div>
-          ))}
+          ))
+        ) : (
+          <p>No Videos Found!</p>
+        )}
       </div>
     </main>
   );

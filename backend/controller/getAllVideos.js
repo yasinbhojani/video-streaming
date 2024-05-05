@@ -7,7 +7,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 export const getAllVideos = async (req, res, next) => {
-  let folders = getFolders(path.join(__dirname, "../uploads/courses"));
+  const folderPath = path.join(__dirname, "../uploads/courses");
+  // Check if the directory exists
+  if (!fs.existsSync(folderPath)) {
+    res.send({ folders: [] });
+    return;
+  }
+  let folders = getFolders(folderPath);
   res.send({ folders: folders });
 };
 
